@@ -1,0 +1,23 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "npx live-server ./dist",
+    "build": "npx webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.131.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
