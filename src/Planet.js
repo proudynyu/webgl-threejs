@@ -6,16 +6,12 @@ export class Planet {
     this.radius = radius;
   }
 
-  _createPlanet() {
+  createPlanet() {
     const geometry = new SphereGeometry(this.radius);
     const material = new MeshBasicMaterial({
       color: this.color,
       wireframe: true,
     });
     return new Mesh(geometry, material);
-  }
-
-  get planet() {
-    return this._createPlanet();
   }
 }

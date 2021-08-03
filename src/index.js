@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import { Planet } from "./Planet.js";
 import { Galaxy } from "./Galaxy.js";
+import { Planet } from "./Planet.js";
 
 const WIDTH = window.innerWidth;
 const HEIGHT = window.innerHeight;
@@ -21,17 +21,21 @@ renderer.setSize(WIDTH, HEIGHT);
 document.body.appendChild(renderer.domElement);
 
 const { galaxy } = new Galaxy();
-galaxy.position.z = -1;
 
-const sun = new Planet();
-sun.planet.position.set(0, 0, 0);
+const sun = new Planet().createPlanet();
+const earth = new Planet("#3264a8", 0.3).createPlanet();
+
+earth.position.set(3, 3, 0);
+sun.rotateX(180);
+earth.rotateX(180);
 
 camera.position.z = 5;
 
-scene.add(galaxy, sun.planet);
+scene.add(galaxy, sun, earth);
 
 function animation() {
   galaxy.rotation.z += 0.0001;
+  sun.rotation.y -= 0.001;
 }
 
 function animate() {
