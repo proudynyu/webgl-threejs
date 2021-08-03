@@ -18,6 +18,7 @@
   "devDependencies": {
     "live-server": "^1.2.1",
     "webpack": "^5.47.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
