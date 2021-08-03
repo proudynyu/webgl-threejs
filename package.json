@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "private": true,
   "scripts": {
-    "start": "npx live-server ./dist",
+    "start": "npx webpack serve --config webpack.config.js",
     "build": "npx webpack"
   },
   "keywords": [],
